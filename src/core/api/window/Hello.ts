@@ -6,22 +6,33 @@ export interface Hello {
      * @param name 姓名
      * @returns 用户
      */
-    hello: (name: string) => User;
+    hello(name: string):string;
 }
 
 /**
- * 用户接口
+ * 用户类
  */
-export interface User {
+export class User implements Hello {
+    
     /**
-     * 用户姓名
+     * 用户的朋友列表
      */
-    name: string;
+    friends:Array<User> = [];
 
     /**
-     * 和朋友一起玩耍
+     * 创建新用户
      * @param friends 朋友列表
-     * @returns 玩耍结果（很迷惑？
      */
-    playWith: (...friends: Array<User>) => string;
+    constructor(friends: Array<User> = []) {
+        this.friends = friends;
+    }
+
+    /**
+     * 打招呼
+     * @param name 用户名
+     * @returns 招呼字符串
+     */
+    hello(name: string): string {
+        return `hello ${name}`;
+    }
 }
