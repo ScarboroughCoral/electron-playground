@@ -21,7 +21,7 @@ export interface User {
     /**
      * 和朋友一起玩耍
      * @param friends 朋友列表
-     * @returns 玩耍结果（很迷惑？?
+     * @returns 玩耍结果（很迷惑？
      */
     playWith: (...friends: Array<User>) => string;
 }
