@@ -7,7 +7,8 @@
     "watch": "tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
     "start": "npm run build && electron ./dist/main.js",
-    "docs": "typedoc --out docs src/core/api/window/Hello.ts"
+    "docs": "typedoc --out docs src/core/api/window/Hello.ts",
+    "test": "jest"
   },
   "repository": "https://github.com/ScarboroughCoral/electron-playground",
   "keywords": [
@@ -21,11 +22,17 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/jest": "^26.0.22",
     "@types/node": "^14.14.37",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
+    "babel-jest": "^26.6.3",
     "electron": "^12.0.2",
     "eslint": "^7.23.0",
+    "jest": "^26.6.3",
     "typedoc": "^0.20.34",
     "typescript": "^4.2.3"
   },
